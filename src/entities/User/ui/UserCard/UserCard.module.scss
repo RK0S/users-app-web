@@ -1,0 +1,79 @@
+.card {
+    padding: 20px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 332px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid var(--bg-card);
+}
+
+.title-wrapper {
+    display: flex;
+    gap: 16px;
+
+    .photo {
+        border-radius: 50%;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.info-wrapper {
+    display: flex;
+    gap: 16px;
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            line-height: 20px;
+        }
+    }
+    
+    .values {
+        width: 219px;
+    }
+    
+    .keys {
+        color: var(--text-hint);
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+.chosed {
+    border: 1px var(--outline-accent) solid;
+}
+
+.delete-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-left: 1px var(--outline-danger) solid;
+    border-bottom: 1px var(--outline-danger) solid;
+    border-radius: 0px 16px 0px 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: var(--bg-accent);
+}

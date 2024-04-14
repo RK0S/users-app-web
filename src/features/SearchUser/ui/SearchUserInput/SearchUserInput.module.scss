@@ -1,0 +1,14 @@
+.input {
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--bg-card);
+    width: 332px;
+    color: var(--text-main);
+    outline: none;
+    border: none;
+    font-family: 'Jura', 'sans-serif';
+}
+
+.input::placeholder {
+    color: var(--text-hint);
+}
