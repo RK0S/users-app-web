@@ -23,6 +23,13 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
+        width: 219px;
+
+        p, h3 {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     }
 
     .title {
