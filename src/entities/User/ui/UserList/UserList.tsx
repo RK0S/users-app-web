@@ -1,4 +1,4 @@
-import { forwardRef, CSSProperties, ReactNode, LegacyRef } from 'react';
+import { forwardRef, CSSProperties, ReactNode, LegacyRef, memo } from 'react';
 import { VirtuosoGrid, GridComponents } from 'react-virtuoso';
 import { useGetUsers } from '../../api/useGetUsers';
 import { filterUsersByQuery } from '../../lib/helpers/filterUsersByQuery';
@@ -30,9 +30,9 @@ const gridComponents = {
     )
 } as GridComponents<unknown>;
 
-export const UserList = (props: UserListProps) => {
+export const UserList = memo((props: UserListProps) => {
     const { searchQuery } = props;
-    const { users } = useUsersStore();
+    const users = useUsersStore(state => state.users);
     const { error, isLoading } = useGetUsers();
 
     if (error) {
@@ -52,4 +52,4 @@ export const UserList = (props: UserListProps) => {
             itemContent={(_, data) => <UserCard user={data} />}
         />
     );
-};
+});
